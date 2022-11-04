@@ -48,18 +48,11 @@ class DetailCalculate : AppCompatActivity(), View.OnClickListener {
                 tvDataRecieved.setText("Berdasarkan data yang anda berikan dimana berat badan anda  $Berat kg dan tinggi badan anda $Tinggi  meter maka  nilai BMI anda yaitu $hasil karena anda seorang $Gender maka anda masuk dalam kategori Obesitas")
             }
         }
-        val btnrecalculate:Button = findViewById(R.id.btn_recalculate)
-        btnrecalculate.setOnClickListener(this)
+
 
     }
 
-    override fun onClick(v: View) {
+    override fun onClick(v: View?) {
         TODO("Not yet implemented")
-        when(v.id){
-        R.id.btn_recalculate -> {
-            val movecalculate = Intent(this@DetailCalculate,Home::class.java)
-            startActivity(movecalculate)
-        }
-        }
     }
 }

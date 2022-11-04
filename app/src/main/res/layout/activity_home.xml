@@ -90,13 +90,14 @@
                 android:background="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:id="@+id/inp_berat"
                 />
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="@string/kg"
+                 android:text="@string/kg_contoh_50"
                  android:textSize="15dp"
                  android:textStyle="bold"
                  android:textAlignment="center"
@@ -126,13 +127,14 @@
                 android:background="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:id="@+id/inp_tinggi"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/meter"
+                android:text="@string/meter_contoh_1_6"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
