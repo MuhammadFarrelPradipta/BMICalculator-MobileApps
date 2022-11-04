@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Muhammad Farrel Pradipta</string>
+    <string name="calculate">Calculate</string>
+    <string name="standar_bmi">Standar BMI</string>
+    <string name="meter">Meter</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+    <string name="kg">Kg</string>
+    <string name="berat_badan">Berat Badan</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="laki_laki">Laki-Laki</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="hasil">Hasil</string>
+    <string name="recalculate">recalculate</string>
+    <string name="standar_bmis">Standar BMI</string>
+</resources>
