@@ -24,6 +24,7 @@ class DetailCalculate : AppCompatActivity(), View.OnClickListener {
         val Tinggi = intent.getDoubleExtra(Extra_Tinggi, 0.0)
         val Gender = intent.getStringExtra(Extra_Gender)
 
+
         val hasil = Berat/(Tinggi*Tinggi)
 
 

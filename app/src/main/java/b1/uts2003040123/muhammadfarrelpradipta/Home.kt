@@ -17,6 +17,9 @@ class Home : AppCompatActivity(), View.OnClickListener {
     private lateinit var  edtGender: RadioButton
     private lateinit var  edtTinggi: EditText
     private lateinit var  edtBerat: EditText
+    private  lateinit var rbtnBoy : RadioButton
+    private  lateinit var rbtnGirl : RadioButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -34,18 +37,18 @@ class Home : AppCompatActivity(), View.OnClickListener {
         edtGender  = findViewById(radioId)
         edtTinggi = findViewById(R.id.inp_tinggi)
         edtBerat = findViewById(R.id.inp_berat)
-
+        rbtnBoy = findViewById(R.id.btn_boy)
+        rbtnGirl = findViewById(R.id.btn_girl)
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
          R.id.btn_calculate->{
-
-
-
              var inGender = edtGender.text.toString().trim()
              var inpBerat = edtBerat.text.toString().trim()
              var inpTinggi = edtTinggi.text.toString().trim()
+             var inBoy =  rbtnBoy.text.toString().trim()
+             var inGirl = rbtnGirl.text.toString().trim()
 
             var  IsEmpetyField = false
              if(inGender.isEmpty()){
@@ -61,13 +64,26 @@ class Home : AppCompatActivity(), View.OnClickListener {
                  edtTinggi.setError("Field ini tidak boleh kosong")
              }
              if(!IsEmpetyField){
-                 var inTinggi = (edtTinggi.text.toString()).toDouble()
-                 var inBerat = Integer.parseInt(edtBerat.text.toString())
-                 val movecalculate = Intent(this@Home,DetailCalculate::class.java)
-                 movecalculate.putExtra(DetailCalculate.Extra_Tinggi, inTinggi)
-                 movecalculate.putExtra(DetailCalculate.Extra_Berat,inBerat)
-                 movecalculate.putExtra(DetailCalculate.Extra_Gender,inGender)
-                 startActivity(movecalculate);
+                 if (rbtnBoy.isChecked()){
+                     var inTinggi = (edtTinggi.text.toString()).toDouble()
+                     var inBerat = Integer.parseInt(edtBerat.text.toString())
+                     val movecalculate = Intent(this@Home,DetailCalculate::class.java)
+                     movecalculate.putExtra(DetailCalculate.Extra_Tinggi, inTinggi)
+                     movecalculate.putExtra(DetailCalculate.Extra_Berat,inBerat)
+                     movecalculate.putExtra(DetailCalculate.Extra_Gender,inBoy)
+                     startActivity(movecalculate);
+                 }
+                 if (rbtnGirl.isChecked()){
+                     var inTinggi = (edtTinggi.text.toString()).toDouble()
+                     var inBerat = Integer.parseInt(edtBerat.text.toString())
+                     val movecalculate = Intent(this@Home,DetailCalculate::class.java)
+                     movecalculate.putExtra(DetailCalculate.Extra_Tinggi, inTinggi)
+                     movecalculate.putExtra(DetailCalculate.Extra_Berat,inBerat)
+                     movecalculate.putExtra(DetailCalculate.Extra_Gender,inGirl)
+                     startActivity(movecalculate);
+                 }
+
+
              }
 
 
